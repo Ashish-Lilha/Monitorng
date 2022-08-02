@@ -1,0 +1,65 @@
+#Webite for hep in crontab
+-- https://crontab.guru/
+
+Run a cron job every 15 minutes
+To schedule a cron job to run every 15 minutes, add the below line in the crontab file:
+*/15 * * * * command/script
+
+
+Run a cron job at 5 am every day
+To schedule a cron job to run at 5 am every day, add the below line in the crontab file:
+0 5 * * * command/script
+
+
+Run a cron job at 5 pm every day
+To schedule a cron job to run at 5 pm every day, add the below line in the crontab file:
+0 17 * * * command/script
+
+
+Run a cron job at 9 am on the first day of every month
+To schedule a cron job to run at 9 am on the first day of every month, add the below line in the crontab file:
+0 9 1 * * command/script
+
+
+Run a cron job every hour at every 15th of March
+To schedule a cron job every hour on every 15th of March, add the below line in the crontab file:
+0 * 15 3 * command/script
+
+
+Run a cron job every 5 hours
+To schedule a cron job every 5 hours, add the below line in the crontab file:
+0 */5 * * * command/script
+
+
+View jobs for the current user
+Use the following command to view all the scheduled cron jobs for the current user:
+$ crontab -l
+
+
+
+View jobs for the other users
+To view all the scheduled jobs of a specific user, issue the following command in Terminal replacing the <username> with the actual user name:
+$ sudo crontab -u <username> -l
+
+
+
+Backup All Cron Jobs
+It is recommended to keep a backup of all the cron jobs in a file so that you can recover in case of deletion. To make a backup of all the current jobs, use the redirection operator to redirect the output of crontab -l to a file.
+$ crontab -l > backup_cron.txt
+
+
+Removing All Scheduled Cron Jobs
+In order to remove all scheduled cron jobs, use the -r flag as follows:
+$ crontab -r
+
+
+
+Cron Permission
+We can limit the access to crontab command through two file: / etc/cron.allow and / etc/cron.deny.
+----
+/etc/cron.allow – Add users (one per line) whom you want to allow access to crontab commands. These users can run schedule jobs.
+/etc/cron.deny – Add users (one per line) whom you want to deny access to crontab commands. These users cannot run scheduled jobs.
+
+
+
+
