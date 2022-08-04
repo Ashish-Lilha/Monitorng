@@ -1,4 +1,4 @@
-
+# Stack Over Fow : https://stackoverflow.com/questions/62644214/how-to-check-yarn-logs-application-id
 # Kerberos Authentication
 
 kinit -kt {PATH OF KEEYTAB} USER@COMPANY.com
