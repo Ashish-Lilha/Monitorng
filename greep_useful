@@ -1,0 +1,3 @@
+
+How do I grep for multiple patterns?
+Next use extended regular expressions: egrep 'pattern1|pattern2' *.py
